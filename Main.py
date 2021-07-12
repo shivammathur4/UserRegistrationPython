@@ -21,6 +21,9 @@ def getUserInput():
         
         lastName = input("Enter your Last Name: ")
         logger.info("Entered last name {}".format(ValidateUser.ValidateName(lastName)))
+
+        email = input("Enter your Email: ")
+        logger.info("Entered email {}".format(ValidateUser.ValidateEmail(email)))
         
     except Exception as e:
         logger.error(e)
