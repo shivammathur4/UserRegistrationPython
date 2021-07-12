@@ -24,6 +24,9 @@ def getUserInput():
 
         email = input("Enter your Email: ")
         logger.info("Entered email {}".format(ValidateUser.ValidateEmail(email)))
+
+        phoneNumber = input("Enter your Phone Number: ")
+        logger.info("Entered phone number {}".format(ValidateUser.ValidatePhoneNumber(phoneNumber)))
         
     except Exception as e:
         logger.error(e)

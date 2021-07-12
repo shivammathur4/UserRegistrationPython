@@ -52,3 +52,25 @@ class ValidateUser:
         
         except Exception as e:
             logger.error(e)
+
+    
+    def ValidatePhoneNumber(phoneInput):
+        """
+    Description:
+        This method is used for validating phone number with regex pattern.
+
+    Return:
+        It return a valid  if phone number is valid and invalid if it's invalid.
+    
+    Parameter:
+        It takes input as a parameter.
+       
+    """
+        try:
+            if (re.match(re.compile(regex_pattern.PHONE_PATTERN),phoneInput)):
+                return "is valid"
+            else:
+                return "is not valid"
+        
+        except Exception as e:
+            logger.error(e)
