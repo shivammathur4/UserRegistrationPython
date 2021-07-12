@@ -18,10 +18,13 @@ def getUserInput():
     try:
         firstName = input("Enter your FirstName: ")
         logger.info("Entered first name {}".format(ValidateUser.ValidateName(firstName)))
-    
+        
+        lastName = input("Enter your Last Name: ")
+        logger.info("Entered last name {}".format(ValidateUser.ValidateName(lastName)))
+        
     except Exception as e:
         logger.error(e)
     
-
+    
 if __name__ == "__main__":
     getUserInput()
