@@ -74,3 +74,25 @@ class ValidateUser:
         
         except Exception as e:
             logger.error(e)
+
+    
+    def ValidatePassword(passwordInput):
+        """
+    Description:
+        This method is used for validating password with regex pattern.
+
+    Return:
+        It return a valid  if password is valid and invalid if it's invalid.
+    
+    Parameter:
+        It takes input as a parameter.
+       
+    """
+        try:
+            if (re.match(re.compile(regex_pattern.PASSWORD_PATTERN),passwordInput)):
+                return "is valid"
+            else:
+                return "is not valid"
+        
+        except Exception as e:
+            logger.error(e)

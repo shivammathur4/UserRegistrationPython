@@ -28,6 +28,9 @@ def getUserInput():
         phoneNumber = input("Enter your Phone Number: ")
         logger.info("Entered phone number {}".format(ValidateUser.ValidatePhoneNumber(phoneNumber)))
         
+        password = input("Enter your Password: ")
+        logger.info("Entered password {}".format(ValidateUser.ValidatePassword(password)))
+        
     except Exception as e:
         logger.error(e)
     
